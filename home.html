@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>آدم كافيه | قهوة مختصة في ولي العهد، مكة</title>
+<meta name="description" content="آدم كافيه في حي ولي العهد بمكة المكرمة: قهوة مختصة، حلويات ومخبوزات، غرفة مذاكرة هادئة وخدمة السيارات. مفتوح يوميًا من ٦ صباحًا حتى ٤ فجرًا.">
+<meta name="theme-color" content="#2b1a12">
+<meta property="og:title" content="آدم كافيه | ولي العهد، مكة">
+<meta property="og:description" content="قهوة مختصة وحلويات ومخبوزات، وغرفة مذاكرة هادئة ودرايف ثرو.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"آدم كافيه - ADAM CAFE",
+  "telephone":"+966508240286",
+  "priceRange":"20-40 SAR",
+  "servesCuisine":["قهوة مختصة","حلويات","مخبوزات"],
+  "address":{"@type":"PostalAddress","streetAddress":"7549 أبو هريرة، حي ولي العهد","addressLocality":"مكة المكرمة","postalCode":"24567","addressCountry":"SA"},
+  "geo":{"@type":"GeoCoordinates","latitude":21.3309208,"longitude":39.6933962},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"04:00"}],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"854"},
+  "sameAs":["https://www.instagram.com/adamcafe_sa/"]
+}
+</script>
+<style>
+/* Layout: محاذاة لليمين، بطل غير متماثل (اسم «آدم» الكوفي الضخم يتراكب على صورة الواجهة)، ثم أقسام بعرض ثابت تتناوب بين خلفية الحليب وخلفية الإسبريسو */
+:root{
+  --espresso:#2b1a12;   /* الخلفية الداكنة والعناوين */
+  --crema:#c89b5e;      /* لون الكريما: التمييز الوحيد */
+  --milk:#f6f4f1;       /* الخلفية الفاتحة */
+  --cardamom:#5e6b4f;   /* لون ثانوي من عالم القهوة السعودية */
+  --ink:#241914;
+  --muted:#76675d;
+  --line:#e4ddd5;
+  --paper:#ffffff;
+  --on-dark:#f3ece4;
+  --on-dark-muted:#bda997;
+  --display:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+  --step--1:.875rem; --step0:1rem; --step1:1.25rem; --step2:1.6rem; --step3:2.2rem; --step4:3.2rem;
+  --gutter:max(18px,env(safe-area-inset-left,0px));
+  --max:1180px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--milk);color:var(--ink);font-family:var(--body);font-size:var(--step0);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.25;margin:0;text-wrap:balance;font-weight:600}
+p{margin:0}
+.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--crema);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ===== شريط التنقل ===== */
+.nav{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(43,26,18,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-dark)}
+.brand b{font-family:var(--display);font-size:1.5rem;font-weight:700}
+.brand span{font-family:var(--display);font-size:.8rem;letter-spacing:.3em;color:var(--crema)}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.links a{color:var(--on-dark);text-decoration:none;font-size:.95rem;opacity:.85}
+.links a:hover{opacity:1;color:var(--crema)}
+.nav-cta{background:var(--crema);color:var(--espresso);text-decoration:none;font-weight:600;padding:9px 18px;border-radius:999px;font-size:.92rem;white-space:nowrap}
+.burger{display:none;background:none;border:0;color:var(--on-dark);width:42px;height:42px;cursor:pointer}
+.burger svg{width:26px;height:26px}
+@media (max-width:860px){
+  .links{position:fixed;inset:calc(68px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;gap:0;background:var(--espresso);padding:8px max(18px,env(safe-area-inset-right,0px)) 18px max(18px,env(safe-area-inset-left,0px));transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s}
+  .links.open{transform:none;opacity:1;pointer-events:auto}
+  .links a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:1.05rem}
+  .burger{display:block}
+  .nav-cta{display:none}
+}
+
+/* ===== البطل ===== */
+.hero{position:relative;background:var(--espresso);color:var(--on-dark);overflow:hidden;padding-top:calc(68px + env(safe-area-inset-top,0px))}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;min-height:min(88vh,760px);padding-block:40px 64px}
+.hero-text{position:relative;z-index:2;display:grid;gap:22px}
+.wordmark{font-family:var(--display);font-weight:700;font-size:clamp(6.5rem,19vw,15rem);line-height:1.05;padding-top:.12em;color:var(--crema);margin-inline-start:-.04em;letter-spacing:-.01em}
+.wordmark small{display:block;font-size:.17em;letter-spacing:.55em;color:var(--on-dark-muted);font-weight:500;margin-top:.55em;line-height:1}
+.hero h1{font-size:var(--step3);font-weight:500;color:var(--on-dark);max-width:18ch}
+.hero p.lead{color:var(--on-dark-muted);max-width:44ch;font-size:1.08rem}
+.status{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:7px 14px;border-radius:999px;font-size:.92rem;width:fit-content}
+.dot{width:9px;height:9px;border-radius:50%;background:#8fbf86;box-shadow:0 0 0 0 rgba(143,191,134,.6);animation:pulse 2.2s infinite}
+.status.closed .dot{background:#d48a6a;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(143,191,134,0)}100%{box-shadow:0 0 0 0 rgba(143,191,134,0)}}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:600;padding:13px 24px;border-radius:999px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--crema);color:var(--espresso)}
+.btn-primary:hover{background:#d6ad74}
+.btn-ghost{border-color:rgba(255,255,255,.25);color:var(--on-dark);background:transparent}
+.btn-ghost:hover{border-color:var(--crema);color:var(--crema)}
+.hero-media{position:relative;z-index:1;align-self:stretch;min-height:420px}
+.hero-media .frame{position:absolute;inset:0;border-radius:200px 200px 18px 18px;overflow:hidden;background:#3a271d}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media .badge{position:absolute;inset-block-end:28px;inset-inline-end:-22px;background:var(--milk);color:var(--espresso);border-radius:16px;padding:14px 18px;display:grid;gap:2px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.badge b{font-family:var(--display);font-size:2rem;line-height:1}
+.badge .stars{color:var(--crema);letter-spacing:3px;font-size:.95rem}
+.badge small{color:var(--muted);font-size:.82rem}
+.hero-facts{border-top:1px solid rgba(255,255,255,.1)}
+.hero-facts .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;padding-block:20px;min-height:0;grid-template-columns:none;color:var(--on-dark-muted);font-size:.95rem}
+.hero-facts strong{color:var(--on-dark);font-weight:600}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:28px;padding-block:28px 40px}
+  .hero-media{min-height:340px;order:-1}
+  .hero-media .frame{border-radius:160px 160px 16px 16px}
+  .hero-media .badge{inset-inline-end:12px}
+}
+
+/* ===== الأقسام ===== */
+section{padding-block:96px}
+.sec-head{display:grid;gap:12px;max-width:640px;margin-bottom:44px}
+.sec-head h2{font-size:var(--step3);color:var(--espresso)}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+.dark{background:var(--espresso);color:var(--on-dark)}
+.dark .sec-head h2{color:var(--on-dark)}
+.dark .sec-head p{color:var(--on-dark-muted)}
+@media (max-width:640px){section{padding-block:68px}.sec-head h2{font-size:var(--step2)}}
+
+/* ===== القصة ===== */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story-copy{display:grid;gap:18px;max-width:58ch}
+.story-copy p{color:#4b3d34;font-size:1.06rem}
+.story-figs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:10px}
+.story-figs div{padding:18px 0 0;display:grid;gap:2px}
+.story-figs b{font-family:var(--display);font-size:var(--step3);color:var(--espresso);line-height:1;font-variant-numeric:tabular-nums}
+.story-figs span{color:var(--muted);font-size:.9rem}
+.story-img{border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--line);max-width:100%}
+.story-img img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.story{grid-template-columns:1fr;gap:36px}.story-img{aspect-ratio:4/3}}
+
+/* ===== الأصناف المميزة ===== */
+.signatures{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.sig{display:grid;gap:12px;align-content:start}
+.sig .cup{aspect-ratio:1;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;max-width:100%}
+.sig .cup svg{width:52%;height:auto}
+.sig h3{font-size:var(--step1);color:var(--espresso)}
+.sig p{color:var(--muted);font-size:.95rem}
+.sig .price{font-family:var(--display);color:var(--cardamom);font-weight:600}
+@media (max-width:960px){.signatures{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.signatures{grid-template-columns:1fr 1fr;gap:16px}.sig h3{font-size:1.05rem}}
+
+/* ===== المنيو ===== */
+.menu-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:28px;scrollbar-width:thin}
+.tab{flex:none;font:inherit;font-size:.95rem;padding:9px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--on-dark);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--crema);color:var(--espresso);border-color:var(--crema);font-weight:600}
+.menu-panel{display:grid;grid-template-columns:1fr 1fr;gap:6px 56px}
+.item{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.item .name{font-weight:500;font-size:1.05rem}
+.item .desc{display:block;color:var(--on-dark-muted);font-size:.88rem;font-weight:400}
+.item .fill{flex:1;border-bottom:1px dotted rgba(255,255,255,.22);transform:translateY(-5px);min-width:20px}
+.item .p{font-family:var(--display);color:var(--crema);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.menu-note{margin-top:26px;color:var(--on-dark-muted);font-size:.9rem;max-width:70ch}
+.menu-empty{grid-column:1/-1;padding:26px;border:1px dashed rgba(255,255,255,.2);border-radius:14px;color:var(--on-dark-muted)}
+@media (max-width:760px){.menu-panel{grid-template-columns:1fr}}
+
+/* ===== المساحات ===== */
+.spaces{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+.space{position:relative;border-radius:18px;overflow:hidden;min-height:340px;display:flex;align-items:flex-end;background:var(--espresso);color:var(--on-dark)}
+.space img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.space .copy{position:relative;padding:28px;display:grid;gap:8px;max-width:46ch;background:linear-gradient(to top,rgba(43,26,18,.95),rgba(43,26,18,0));width:100%}
+.space h3{font-size:var(--step2)}
+.space p{color:var(--on-dark)}
+.space.alt{background:var(--cardamom)}
+.space.alt .copy{background:none}
+.space-list{display:grid;gap:22px}
+.mini{border-radius:18px;padding:26px;background:var(--paper);border:1px solid var(--line);display:grid;gap:8px}
+.mini h3{font-size:var(--step1);color:var(--espresso)}
+.mini p{color:var(--muted)}
+@media (max-width:860px){.spaces{grid-template-columns:1fr}}
+
+/* ===== المعرض ===== */
+.gallery{columns:4 220px;column-gap:14px}
+.gallery button{display:block;width:100%;margin:0 0 14px;padding:0;border:0;border-radius:12px;overflow:hidden;cursor:zoom-in;background:var(--line);break-inside:avoid}
+.gallery img{width:100%;height:auto;transition:transform .5s}
+.gallery button:hover img{transform:scale(1.04)}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,12,8,.94);display:grid;place-items:center;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lightbox img{max-height:84vh;max-width:min(1100px,100%);border-radius:10px;object-fit:contain}
+.lb-btn{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
+.lb-close{top:calc(16px + env(safe-area-inset-top,0px));inset-inline-start:16px}
+.lb-prev{inset-inline-end:16px;top:50%}
+.lb-next{inset-inline-start:16px;top:50%}
+.lb-count{position:absolute;bottom:calc(18px + env(safe-area-inset-bottom,0px));color:#cbb;font-size:.9rem}
+
+/* ===== آراء الزوار ===== */
+.reviews{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.score{display:grid;gap:10px}
+.score b{font-family:var(--display);font-size:5.5rem;line-height:.9;color:var(--espresso)}
+.score .stars{color:var(--crema);font-size:1.4rem;letter-spacing:4px}
+.score p{color:var(--muted)}
+.bars{display:grid;gap:8px;margin-top:10px;max-width:320px}
+.bar{display:grid;grid-template-columns:16px 1fr;gap:10px;align-items:center;font-size:.85rem;color:var(--muted)}
+.bar i{height:7px;border-radius:9px;background:var(--line);overflow:hidden;display:block}
+.bar i::after{content:"";display:block;height:100%;width:var(--w);background:var(--crema);border-radius:9px}
+.themes{display:grid;gap:0}
+.theme{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.theme:first-child{padding-top:0}
+.theme svg{width:30px;height:30px;color:var(--cardamom);margin-top:4px}
+.theme h3{font-size:var(--step1);color:var(--espresso);margin-bottom:4px}
+.theme p{color:var(--muted)}
+.reviews .btn{margin-top:22px;border-color:var(--espresso);color:var(--espresso)}
+.reviews .btn:hover{background:var(--espresso);color:var(--milk)}
+@media (max-width:860px){.reviews{grid-template-columns:1fr;gap:36px}}
+
+/* ===== الزيارة ===== */
+.visit{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch}
+.visit-info{display:grid;gap:26px;align-content:start}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.hours td:last-child{text-align:left;direction:ltr;color:var(--on-dark-muted)}
+.hours tr.today td{color:var(--crema);font-weight:600}
+.hours tr.today td:first-child::after{content:"اليوم";font-size:.72rem;background:var(--crema);color:var(--espresso);padding:2px 8px;border-radius:999px;margin-inline-start:10px;vertical-align:middle}
+.contact-grid{display:grid;gap:14px}
+.contact-row{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.contact-row svg{width:22px;height:22px;color:var(--crema);margin-top:3px}
+.contact-row a{text-decoration:none}
+.contact-row a:hover{color:var(--crema)}
+.contact-row small{display:block;color:var(--on-dark-muted)}
+.ltr{direction:ltr;unicode-bidi:isolate}
+.map{border-radius:18px;overflow:hidden;min-height:420px;background:#3a271d;border:1px solid rgba(255,255,255,.1)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:saturate(.8)}
+@media (max-width:860px){.visit{grid-template-columns:1fr}.map,.map iframe{min-height:320px}}
+
+/* ===== التذييل ===== */
+footer{background:#1f130d;color:var(--on-dark-muted);padding-block:56px calc(28px + env(safe-area-inset-bottom,0px))}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.foot h4{font-family:var(--display);color:var(--on-dark);font-weight:600;font-size:1.05rem;margin:0 0 12px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--crema)}
+.foot .brand b{font-size:2.2rem;color:var(--crema)}
+.foot p{max-width:38ch;margin-top:10px}
+.social{display:flex;gap:10px;margin-top:16px}
+.social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:grid;place-items:center}
+.social svg{width:18px;height:18px}
+.legal{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.88rem}
+.credit a{color:var(--crema);font-weight:600}
+@media (max-width:760px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+
+/* زر الاتصال العائم للجوال */
+.fab{position:fixed;z-index:40;inset-block-end:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-start:calc(18px + env(safe-area-inset-left,0px));display:none;background:var(--crema);color:var(--espresso);border-radius:999px;padding:12px 18px;font-weight:600;text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.25);align-items:center;gap:8px}
+.fab svg{width:18px;height:18px}
+@media (max-width:860px){.fab{display:inline-flex}}
+
+/* حركة دخول واحدة للبطل */
+.hero-text>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-text>*:nth-child(2){animation-delay:.08s}.hero-text>*:nth-child(3){animation-delay:.16s}.hero-text>*:nth-child(4){animation-delay:.24s}.hero-text>*:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.img-fallback{background:repeating-linear-gradient(135deg,#3a271d 0 14px,#33221a 14px 28px)}
+</style>
+</head>
+<body>
+
+<!-- ============ التنقل ============ -->
+<nav class="nav" id="nav" aria-label="القائمة الرئيسية">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="آدم كافيه، العودة للأعلى"><b>آدم</b><span>ADAM</span></a>
+    <ul class="links" id="links">
+      <li><a href="#story">قصتنا</a></li>
+      <li><a href="#signature">الأصناف المميزة</a></li>
+      <li><a href="#menu">المنيو</a></li>
+      <li><a href="#spaces">المكان</a></li>
+      <li><a href="#gallery">الصور</a></li>
+      <li><a href="#visit">الزيارة</a></li>
+    </ul>
+    <a class="nav-cta" href="https://www.google.com/maps/dir/?api=1&destination=21.3309208,39.6933962" target="_blank" rel="noopener">الاتجاهات</a>
+    <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ البطل ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="wordmark" aria-hidden="true">آدم<small>ADAM CAFE</small></div>
+      <h1>قهوة مختصة وحلا طازج في قلب ولي العهد</h1>
+      <p class="lead">جيرانكم في مكة. نستقبلكم من السادسة صباحًا، ونبقى معكم حتى الرابعة فجرًا، مع غرفة مذاكرة هادئة وخدمة سيارات لمن يستعجل.</p>
+      <div class="status" id="status" role="status"><span class="dot"></span><span id="statusText">مفتوح يوميًا ٦ ص – ٤ ص</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="#menu">تصفّح المنيو</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=21.3309208,39.6933962" target="_blank" rel="noopener">احصل على الاتجاهات</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="frame"><img id="heroImg" alt="واجهة آدم كافيه في حي ولي العهد بمكة" fetchpriority="high" referrerpolicy="no-referrer"></div>
+      <div class="badge" aria-label="تقييم 4.7 من 5 على Google">
+        <b>4.7</b>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <small>٨٥٤ مراجعة على Google</small>
+      </div>
+    </div>
+  </div>
+  <div class="hero-facts">
+    <div class="wrap">
+      <span><strong>العنوان:</strong> 7549 أبو هريرة، حي ولي العهد</span>
+      <span><strong>للحجز والاستفسار:</strong> <a class="ltr" href="tel:+966508240286">050 824 0286</a></span>
+      <span><strong>متوسط الطلب:</strong> ٢٠–٤٠ ر.س للشخص</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ القصة ============ -->
+<section id="story">
+  <div class="wrap story">
+    <div class="story-copy">
+      <h2 style="font-size:var(--step3);color:var(--espresso)">من جدة إلى جيران مكة</h2>
+      <p>بدأت آدم في جدة بفروعها في السنابل والسامر والحمدانية، وحملت نفس الفكرة إلى حي ولي العهد: مكان قريب من البيت، تعرف فيه الباريستا باسمه، وتطلب قهوتك كما تحبها.</p>
+      <p>نقدّم القهوة المختصة بمحاصيل مختارة، وحلويات ومخبوزات تُحضّر يوميًا. ولأن كثيرًا من زوارنا طلاب وعاملون عن بُعد، خصصنا غرفة مذاكرة صامتة، وركنًا معزولًا للمدخنين حتى يبقى المقهى هادئًا للجميع.</p>
+      <div class="story-figs">
+        <div><b>4.7</b><span>تقييم الزوار</span></div>
+        <div><b class="ltr">854</b><span>مراجعة على Google</span></div>
+        <div><b>٢٢</b><span>ساعة يوميًا</span></div>
+      </div>
+    </div>
+    <div class="story-img"><img data-photo="1" alt="فريق آدم كافيه خلف البار" loading="lazy" referrerpolicy="no-referrer"></div>
+  </div>
+</section>
+
+<!-- ============ الأصناف المميزة ============ -->
+<section id="signature" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>ما يطلبه زوارنا أكثر</h2>
+      <p>أصناف يتكرر ذكرها في مراجعات الزوار وفي منشوراتنا.</p>
+    </div>
+    <div class="signatures">
+      <article class="sig">
+        <div class="cup" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#2b1a12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20h28l-3 34a4 4 0 0 1-4 4H25a4 4 0 0 1-4-4z"/><path d="M16 20h32M32 8v12M20 34h24" stroke="#c89b5e"/></svg></div>
+        <h3>آيس سبانش لاتيه</h3>
+        <p>إسبريسو مع حليب محلّى بلمسة كراميل، على الثلج.</p>
+        <span class="price">17 ر.س</span>
+      </article>
+      <article class="sig">
+        <div class="cup" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#2b1a12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 26h32v10a16 16 0 0 1-32 0z"/><path d="M46 29h4a5 5 0 0 1 0 10h-5"/><path d="M22 18c0-3 3-3 3-6M30 18c0-3 3-3 3-6M38 18c0-3 3-3 3-6" stroke="#c89b5e"/></svg></div>
+        <h3>مشروب آدم</h3>
+        <p>إسبريسو مع الفانيلا ومزيج كريمة خاص بآدم.</p>
+        <span class="price">اسأل عن السعر في الفرع</span>
+      </article>
+      <article class="sig">
+        <div class="cup" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#2b1a12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="36" r="18"/><circle cx="25" cy="31" r="2" fill="#c89b5e" stroke="none"/><circle cx="37" cy="29" r="2" fill="#c89b5e" stroke="none"/><circle cx="33" cy="41" r="2" fill="#c89b5e" stroke="none"/><circle cx="24" cy="42" r="2" fill="#c89b5e" stroke="none"/><path d="M24 16c3-6 13-6 16 0" stroke="#c89b5e"/></svg></div>
+        <h3>كوكيز دبل شوكليت</h3>
+        <p>كوكيز شوكولاتة مع آيس كريم فانيلا وطبقة بسكويت مقرمشة.</p>
+        <span class="price">اسأل عن السعر في الفرع</span>
+      </article>
+      <article class="sig">
+        <div class="cup" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#2b1a12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 44l36-20 8 14v12H10z"/><path d="M10 44h44M14 50h36" stroke="#c89b5e"/><path d="M44 18v6" /></svg></div>
+        <h3>كيكة الشوكولاتة</h3>
+        <p>أكثر حلا يمدحه الزوار في مراجعاتهم.</p>
+        <span class="price">اسأل عن السعر في الفرع</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ المنيو ============ -->
+<section id="menu" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>المنيو</h2>
+      <p>جميع الأسعار شاملة ضريبة القيمة المضافة.</p>
+    </div>
+    <div class="menu-tabs" role="tablist" aria-label="أقسام المنيو" id="tabs"></div>
+    <div class="menu-panel" id="panel" role="tabpanel" aria-live="polite"></div>
+    <p class="menu-note">يحتاج البالغون ٢٠٠٠ سعرة حرارية يوميًا في المتوسط، وقد تختلف الاحتياجات من شخص لآخر. الأصناف والأسعار قد تتغير، والقائمة الكاملة متوفرة في الفرع.</p>
+  </div>
+</section>
+
+<!-- ============ المكان ============ -->
+<section id="spaces">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>مكان يناسب يومك</h2>
+      <p>سواء جئت لتنجز مذاكرتك، أو تجلس مع أصحابك، أو تأخذ قهوتك وأنت في سيارتك.</p>
+    </div>
+    <div class="spaces">
+      <div class="space">
+        <img data-photo="3" alt="الجلسات الداخلية في آدم كافيه" loading="lazy" referrerpolicy="no-referrer">
+        <div class="copy">
+          <h3>غرفة المذاكرة</h3>
+          <p>غرفة مستقلة وصامتة للمذاكرة والعمل، بعيدًا عن حركة البار. مناسبة للجلسات الطويلة.</p>
+        </div>
+      </div>
+      <div class="space-list">
+        <div class="mini">
+          <h3>درايف ثرو</h3>
+          <p>اطلب قهوتك من سيارتك واستلمها خلال دقائق، في أي وقت حتى الرابعة فجرًا.</p>
+        </div>
+        <div class="mini">
+          <h3>ركن معزول للمدخنين</h3>
+          <p>زاوية مغلقة ومفصولة تمامًا عن باقي المقهى، حتى تبقى الأجواء نظيفة للجميع.</p>
+        </div>
+        <div class="mini">
+          <h3>مهيأ للكراسي المتحركة</h3>
+          <p>مدخل وجلسات ودورة مياه وموقف سيارات مهيأة لذوي الاحتياجات الخاصة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ الصور ============ -->
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>من داخل آدم</h2>
+      <p>اضغط على أي صورة لعرضها بالحجم الكامل.</p>
+    </div>
+    <div class="gallery" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ آراء الزوار ============ -->
+<section id="reviews" style="background:var(--paper);border-block:1px solid var(--line)">
+  <div class="wrap reviews">
+    <div class="score">
+      <b>4.7</b>
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <p>من ٨٥٤ مراجعة على خرائط Google</p>
+      <a class="btn" href="https://www.google.com/maps/place/?q=place_id:0x15c217d5e67685d1:0xfc4ee47d308bd145" target="_blank" rel="noopener">اقرأ المراجعات على Google</a>
+    </div>
+    <div class="themes">
+      <h2 style="font-size:var(--step2);color:var(--espresso);margin-bottom:20px">ما يذكره الزوار عنّا</h2>
+      <div class="theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        <div><h3>أجواء هادئة في كل الأوقات</h3><p>كثير من الزوار يرجعون أكثر من مرة في الأسبوع بسبب هدوء المكان وراحته.</p></div>
+      </div>
+      <div class="theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        <div><h3>فريق يعرفه الزوار بالاسم</h3><p>أسماء فريقنا تتكرر في المراجعات أكثر من مئة مرة، شكرًا على حسن التعامل.</p></div>
+      </div>
+      <div class="theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14l-1.5 9h-11z"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        <div><h3>حلا لذيذ وأسعار مناسبة</h3><p>كيكة الشوكولاتة والحلويات من أكثر ما يُمدح، مع عروض متكررة على المشروبات.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ الزيارة ============ -->
+<section id="visit" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>زورونا</h2>
+      <p>في حي ولي العهد، شارع أبو هريرة، مع مواقف أمام المقهى.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-info">
+        <table class="hours" aria-label="ساعات العمل">
+          <tbody id="hoursBody"></tbody>
+        </table>
+        <div class="contact-grid">
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div>7549 أبو هريرة، حي ولي العهد، مكة 24567<small class="ltr">8MJV+99 Makkah</small></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <div><a class="ltr" href="tel:+966508240286">050 824 0286</a><small>اتصال للاستفسار والطلبات</small></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            <div><a class="ltr" href="https://www.instagram.com/adamcafe_sa/" target="_blank" rel="noopener">@adamcafe_sa</a><small>عروضنا وأصنافنا الجديدة أولًا بأول</small></div>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=21.3309208,39.6933962" target="_blank" rel="noopener">الاتجاهات في خرائط Google</a>
+          <a class="btn btn-ghost" href="tel:+966508240286">اتصل بنا</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="موقع آدم كافيه على الخريطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=21.3309208,39.6933962&z=17&hl=ar&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ التذييل ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><b>آدم</b><span>ADAM CAFE</span></a>
+        <p>قهوة مختصة وحلويات ومخبوزات. فرع مكة، حي ولي العهد.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/adamcafe_sa/" target="_blank" rel="noopener" aria-label="إنستغرام آدم كافيه"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="https://linkfly.to/adamcafe" target="_blank" rel="noopener" aria-label="روابط فروع آدم كافيه"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1"/><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>تصفّح</h4>
+        <ul>
+          <li><a href="#menu">المنيو</a></li>
+          <li><a href="#spaces">غرفة المذاكرة</a></li>
+          <li><a href="#gallery">الصور</a></li>
+          <li><a href="#visit">ساعات العمل والموقع</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>فروعنا</h4>
+        <ul>
+          <li>مكة: ولي العهد</li>
+          <li>جدة: السنابل</li>
+          <li>جدة: السامر</li>
+          <li>جدة: الحمدانية</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year">2026</span> آدم كافيه. جميع الحقوق محفوظة.</span>
+      <span class="credit">تصميم وتطوير <a href="https://wa.me/966535033546" target="_blank" rel="noopener">فريق تكامل</a>، تكامل يضمن نموك</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+966508240286"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>اتصل الآن</a>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="عرض الصورة">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="إغلاق">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="الصورة السابقة">›</button>
+  <img id="lbImg" alt="" referrerpolicy="no-referrer">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="الصورة التالية">‹</button>
+  <span class="lb-count" id="lbCount"></span>
+</div>
+
+<script>
+/* ========= البيانات: عدّلها من هنا بسهولة ========= */
+const PHOTO_BASE = "https://lh3.googleusercontent.com/gps-cs-s/";
+const PHOTOS = [
+  "ANWiy9R5VbLR3BkylsCVMxvE4Kui7toHlXCUKsb8k_FElQTzvc2KnFm1s5Pr5K5AeZ2srtky35PRH38qxQnLkqzJ9Fcm2LecVdkS3uZDrK7HbDMFhFp8TmCiVRc03apc57WgztSAP7bhrKeP0efS",
+  "ANWiy9RCWHm9FA1xlOywAao-gE_2qNGIaDiXI29mmla1oaJe90-gwedKV-_YcGGRaAcGHptIzCt44QiNX_bctQZ97Dj7TTViUzgxwqv_YUOZxz7BcbmipZW4aq1R9xEDx5IBjTBw5xAanQ",
+  "ANWiy9SoZBow_Sa1KS_0e6skttqKPk4OPXaZg2FD_fooY-z20ZtWm4yMuAl3vKX-Rurv01BGbKjGXQRWIilE3laKxJsQ0BxBfMeXtAvrZNMxkdFPXAjwLyqhJf4blJpWbPAOZ9BpZSSe_QzyyfE",
+  "ANWiy9TdAvyUuTA-jIA4J4fe1Q0WRJWeeDMAsXmZUQuLqOHEddHLfQuyFiqoX1L5X89wEH1W_Zqky_KJke4Axp9hAIME7286vuF6W9yDev8ScEm1x05XyDqE_BJwxUay79hlNAMpxb86bw",
+  "ANWiy9SrMHw0LMujxSXeVmFkqOqk1QzEKkLaD3XffOitbkusskQZ637Z6rQOK7wIqGffUfYjYOYXlhAu6IAes8zyUu_7iVp7bRzY2vPtaTILl9qFigLaAj8Vuc3_K-opE0kTljt9ACXsPHJ1Kd8",
+  "ANWiy9TiEXXFjJ-7EPyF3kr82I1hLUCJhJ-8u5LtTPs1KJpVVkiZTYsM59TjMFVrlaQS8eM_PTZzgv1CPjHJbWXmahWQQzK4n2NiedmN_pJUGay14wbqO5idRSjqJKcQAttsYa6PKr6RUqI-zUkl",
+  "ANWiy9R3b9L8Bcl-FoAPjNyxQ_AvtCEnlRrH28UETogmPrC3pg1v2hrGhK4hB-3k0AqX1rGuc3V-EyLcdixXAe5sztcpXRAWdJIVt_i12Als63-NzzszqHig7skc3RTKnITj4dJMN7x4HHFV9_E",
+  "ANWiy9SShpVZAFdBR1o3zzuyE3MLZiBvcpIDoEY8TUXFL5av-aLJ2fo6Rt6UEsZMawc8ZPSbGsMbqBCrFMRO7OKe4El7QD4MIkEOonyHGQndNGpuq0ioCoIlhbs3M3kKkOwQu9YB3PtQvp43Qnrn",
+  "ANWiy9ReZAoQ29iHcjR94JuHf67VeECr3C_EgL4E5Ocea_g4hvFvVjsKsyDxluhUJJiTPkF2_XT12o3KWVMWfopyQOhRu1y7ZNycf7vXbcxHM3x155cVBUZUEvhMn6O9TuiCQJutC2Pplft63Xc",
+  "ANWiy9TosVn8FbQkEyO_aB9nvTGoITBuhqqk6WdJVaVeQF3hk7JIuRAOkWiGhke5K_dDck5_ZiNZhhrFPu5MdKAONS8r5PNOC47TN5Lf6gqHZCZmkJ6C71SCLtCQ8OyQYTz-dmf-0F6x_9AuO3U"
+];
+/* الصور المحلية بجانب الملف أولًا (adam-cafe-1.jpg ... adam-cafe-10.jpg)، وإن لم توجد تُجلب من Google */
+const localPhoto = i => "adam-cafe-" + (i + 1) + ".jpg";
+const remotePhoto = (i, size) => PHOTO_BASE + PHOTOS[i] + "=s" + size;
+const photo = (i, size) => localPhoto(i);
+
+/* الأسعار المعروفة فقط، وأي قسم بلا أصناف يظهر برسالة واضحة */
+const MENU = [
+  {name:"المشروبات الباردة", items:[
+    {n:"آيس سبانش لاتيه", d:"إسبريسو وحليب محلّى على الثلج", p:17},
+    {n:"آيس لاتيه", d:"إسبريسو وحليب بارد", p:16},
+    {n:"آيس فلات وايت", d:"جرعة إسبريسو مضاعفة وحليب ناعم", p:15},
+    {n:"آيس كورتادو", d:"إسبريسو مع قليل من الحليب", p:14}
+  ]},
+  {name:"المشروبات الساخنة", items:[]},
+  {name:"القهوة السوداء", items:[]},
+  {name:"موهيتو", items:[]},
+  {name:"الحلى", items:[
+    {n:"كوكيز دبل شوكليت", d:"مع آيس كريم فانيلا وبسكويت مقرمش"},
+    {n:"كيكة الشوكولاتة", d:"من أكثر الأصناف طلبًا"}
+  ]},
+  {name:"المخبوزات", items:[]},
+  {name:"محاصيل البن", items:[]},
+  {name:"الإضافات", items:[]}
+];
+
+const HOURS = [["السبت",6],["الأحد",0],["الاثنين",1],["الثلاثاء",2],["الأربعاء",3],["الخميس",4],["الجمعة",5]];
+const OPEN = 6, CLOSE = 4; // من ٦ صباحًا حتى ٤ فجرًا اليوم التالي
+
+/* ========= الصور ========= */
+function setImg(img, i, size){
+  img.src = localPhoto(i);
+  img.onerror = () => {
+    img.onerror = () => { img.onerror = null; img.removeAttribute("src"); img.parentElement.classList.add("img-fallback"); };
+    img.src = remotePhoto(i, size);
+  };
+}
+setImg(document.getElementById("heroImg"), 0, 1400);
+document.querySelectorAll("[data-photo]").forEach(img => setImg(img, +img.dataset.photo, 1200));
+
+const grid = document.getElementById("galleryGrid");
+PHOTOS.forEach((_, i) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.setAttribute("aria-label", "عرض الصورة " + (i+1));
+  const im = document.createElement("img");
+  im.loading = "lazy"; im.referrerPolicy = "no-referrer"; im.alt = "صورة من آدم كافيه " + (i+1);
+  b.appendChild(im); grid.appendChild(b);
+  setImg(im, i, 700);
+  b.addEventListener("click", () => openLb(i));
+});
+
+/* ========= عارض الصور ========= */
+const lb = document.getElementById("lightbox"), lbImg = document.getElementById("lbImg"), lbCount = document.getElementById("lbCount");
+let cur = 0, lastFocus = null;
+function showLb(i){ cur = (i + PHOTOS.length) % PHOTOS.length; lbImg.src = localPhoto(cur); lbImg.onerror = () => { lbImg.onerror = null; lbImg.src = remotePhoto(cur, 1800); }; lbImg.alt = "صورة من آدم كافيه " + (cur+1); lbCount.textContent = (cur+1) + " / " + PHOTOS.length; }
+function openLb(i){ lastFocus = document.activeElement; showLb(i); lb.hidden = false; document.body.style.overflow = "hidden"; document.getElementById("lbClose").focus(); }
+function closeLb(){ lb.hidden = true; document.body.style.overflow = ""; if(lastFocus) lastFocus.focus(); }
+document.getElementById("lbClose").onclick = closeLb;
+document.getElementById("lbPrev").onclick = () => showLb(cur - 1);
+document.getElementById("lbNext").onclick = () => showLb(cur + 1);
+lb.addEventListener("click", e => { if(e.target === lb) closeLb(); });
+document.addEventListener("keydown", e => {
+  if(lb.hidden) return;
+  if(e.key === "Escape") closeLb();
+  if(e.key === "ArrowRight") showLb(cur - 1);
+  if(e.key === "ArrowLeft") showLb(cur + 1);
+});
+
+/* ========= المنيو ========= */
+const tabs = document.getElementById("tabs"), panel = document.getElementById("panel");
+function renderMenu(idx){
+  [...tabs.children].forEach((t,i) => t.setAttribute("aria-selected", i === idx));
+  const cat = MENU[idx];
+  panel.innerHTML = "";
+  if(!cat.items.length){
+    panel.innerHTML = '<div class="menu-empty">أصناف «' + cat.name + '» وأسعارها متوفرة في الفرع. اسأل الباريستا عن المتاح اليوم.</div>';
+    return;
+  }
+  cat.items.forEach(it => {
+    const row = document.createElement("div"); row.className = "item";
+    row.innerHTML = '<span class="name">' + it.n + (it.d ? '<span class="desc">' + it.d + '</span>' : '') + '</span><span class="fill"></span><span class="p">' + (it.p ? it.p + ' ر.س' : 'في الفرع') + '</span>';
+    panel.appendChild(row);
+  });
+}
+MENU.forEach((c,i) => {
+  const t = document.createElement("button");
+  t.type = "button"; t.className = "tab"; t.role = "tab"; t.id = "tab-" + i; t.textContent = c.name;
+  t.addEventListener("click", () => renderMenu(i));
+  tabs.appendChild(t);
+});
+renderMenu(0);
+
+/* ========= ساعات العمل والحالة الآن ========= */
+function riyadhNow(){ return new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Riyadh"})); }
+const now = riyadhNow(), h = now.getHours(), m = now.getMinutes();
+const todayIdx = now.getDay();
+document.getElementById("hoursBody").innerHTML = HOURS.map(([n,d]) =>
+  '<tr' + (d === todayIdx ? ' class="today"' : '') + '><td>' + n + '</td><td>6:00 AM – 4:00 AM</td></tr>').join("");
+const isOpen = h >= OPEN || h < CLOSE;
+const st = document.getElementById("status"), stt = document.getElementById("statusText");
+if(isOpen){
+  const minsLeft = ((CLOSE + 24 - h) % 24) * 60 - m;
+  stt.textContent = minsLeft <= 60 ? "مفتوح الآن، يغلق خلال " + minsLeft + " دقيقة" : "مفتوح الآن حتى ٤ فجرًا";
+} else {
+  st.classList.add("closed");
+  stt.textContent = "مغلق الآن، نفتح الساعة ٦ صباحًا";
+}
+
+/* ========= التنقل ========= */
+const nav = document.getElementById("nav"), burger = document.getElementById("burger"), links = document.getElementById("links");
+const onScroll = () => nav.classList.toggle("solid", scrollY > 30);
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+burger.addEventListener("click", () => {
+  const open = links.classList.toggle("open");
+  burger.setAttribute("aria-expanded", open);
+  burger.setAttribute("aria-label", open ? "إغلاق القائمة" : "فتح القائمة");
+  if(open) nav.classList.add("solid");
+});
+links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { links.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+document.getElementById("year").textContent = now.getFullYear();
+</script>
+</body>
+</html>
